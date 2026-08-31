@@ -1,0 +1,28 @@
+yolo:
+  model: yolov8n.pt
+  data_yaml: data/processed/yolo/data.yaml
+  epochs: 50
+  imgsz: 640
+  batch: 16
+  patience: 10
+  device: 0
+  workers: 4
+  project: results/training/yolo
+  name: yolov8n_pistol
+  weights_dir: models/yolo
+
+faster_rcnn:
+  coco_dir: data/processed/coco
+  output_dir: models/faster_rcnn
+  logs_dir: results/training/faster_rcnn
+  device: cuda
+  require_cuda: true
+  resume: true
+  epochs: 8
+  batch_size: 4
+  learning_rate: 0.005
+  momentum: 0.9
+  weight_decay: 0.0005
+  num_workers: 2
+  num_classes: 2
+  validation_metrics_every: 5

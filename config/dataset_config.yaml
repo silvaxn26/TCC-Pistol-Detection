@@ -1,0 +1,35 @@
+project_root: .
+
+roboflow:
+  workspace: silvaxn
+  project: Pistol_detection
+  version: 1
+  yolo_format: yolov8
+  coco_format: coco
+
+yolo_dataset:
+  raw_dir: data/roboflow_yolo
+  normalized_dir: data/processed/yolo
+  yaml_file: data/roboflow_yolo/data.yaml
+
+coco_dataset:
+  raw_dir: data/roboflow_coco
+  normalized_dir: data/processed/coco
+
+splits:
+  - train
+  - valid
+  - test
+
+class_normalization:
+  target_class: pistol
+  merge_as_pistol:
+    - pistol
+    - Handgun
+  review_manually:
+    - "0"
+    - "1"
+
+inspection:
+  examples_per_ambiguous_class: 10
+  output_dir: results/reports

@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Datasets and generated data
+data/roboflow_yolo/*
+data/roboflow_coco/*
+data/processed/*
+!data/roboflow_yolo/.gitkeep
+!data/roboflow_coco/.gitkeep
+!data/processed/.gitkeep
+
+# Models and training outputs
+models/yolo/*
+models/faster_rcnn/*
+!models/yolo/.gitkeep
+!models/faster_rcnn/.gitkeep
+runs/
+*.pt
+*.pth
+*.onnx
+*.engine
+
+# Results
+results/metrics/*
+results/charts/*
+results/predictions/*
+results/reports/*
+results/training/*
+results/evaluation/*
+!results/metrics/.gitkeep
+!results/charts/.gitkeep
+!results/predictions/.gitkeep
+!results/reports/.gitkeep
+!results/training/.gitkeep
+!results/evaluation/.gitkeep
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
